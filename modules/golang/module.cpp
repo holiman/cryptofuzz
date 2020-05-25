@@ -115,5 +115,13 @@ std::optional<bool> Golang::OpECDSA_Verify(operation::ECDSA_Verify& op) {
     //return getResultAs<component::bool>();
 }
 
+std::optional<bool> Golang::OpBLS_Verify(operation::BLS_Verify& op) {
+    auto jsonStr = op.ToJSON().dump();
+    Golang_Cryptofuzz_OpBLS_Verify(toGoSlice(jsonStr));
+
+    return std::nullopt;
+}
+
+
 } /* namespace module */
 } /* namespace cryptofuzz */

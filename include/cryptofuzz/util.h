@@ -30,6 +30,8 @@ std::string ToString(const component::Ciphertext& val);
 std::string ToString(const component::ECC_PublicKey& val);
 std::string ToString(const component::G2& val);
 std::string ToString(const component::BLS_PublicKey& val);
+std::string HexDump(const void *_data, const size_t len, const std::string description);
+void abort(const std::vector<std::string> components);
 uint8_t* GetNullPtr(void);
 uint8_t* malloc(const size_t n);
 uint8_t* realloc(void* ptr, const size_t n);

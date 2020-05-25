@@ -523,6 +523,13 @@ func Golang_Cryptofuzz_OpECDSA_Verify(in []byte) {
     /* TODO set result */
 }
 
+//export Golang_Cryptofuzz_OpBLS_Verify
+func Golang_Cryptofuzz_OpBLS_Verify(in []byte){
+    resetResult()
+    panic("this is actually not implemented")
+}
+// std::optional<bool> OpBLS_Verify(operation::BLS_Verify& op);
+
 /*
 testing
 func main() {
